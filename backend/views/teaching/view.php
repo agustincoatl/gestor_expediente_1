@@ -1,0 +1,46 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\DetailView;
+
+/** @var yii\web\View $this */
+/** @var common\models\Teaching $model */
+
+$this->title = $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Teachings', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+\yii\web\YiiAsset::register($this);
+?>
+<div class="teaching-view">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <p>
+        <?= Html::a('Actualizar', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-danger',
+            'data' => [
+                'confirm' => 'Seguro que deseas eliminar este registro?',
+                'method' => 'post',
+            ],
+        ]) ?>
+    </p>
+
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'id',
+            'name',
+            'first_last_name',
+            'second_last_name',
+            'born_date',
+            'curp',
+            'gender',
+            'email:email',
+            'phone_number',
+            'rfc',
+            'user_id',
+        ],
+    ]) ?>
+
+</div>
