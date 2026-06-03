@@ -23,6 +23,10 @@ Thumbs.db
 # composer itself is not needed
 composer.phar
 
+# packaged local copies
+/proyect_yii.zip
+*.zip
+
 # Mac DS_Store Files
 .DS_Store
 
@@ -41,3 +45,33 @@ phpunit.phar
 /backend/web/index.php
 /backend/web/index-test.php
 /backend/web/robots.txt
+
+# local environment files with real credentials
+/common/config/main-local.php
+/backend/config/main-local.php
+/frontend/config/main-local.php
+/console/config/main-local.php
+
+# uploaded documents and generated public assets
+/backend/web/uploads/*
+!/backend/web/uploads/.gitkeep
+!/backend/web/uploads/documents/
+/backend/web/uploads/documents/*
+!/backend/web/uploads/documents/.gitkeep
+/backend/web/assets/*
+!/backend/web/assets/.gitignore
+!/backend/web/assets/.gitkeep
+/frontend/web/assets/*
+!/frontend/web/assets/.gitignore
+!/frontend/web/assets/.gitkeep
+
+# generated runtime files
+/backend/runtime/*
+!/backend/runtime/.gitignore
+!/backend/runtime/.gitkeep
+/frontend/runtime/*
+!/frontend/runtime/.gitignore
+!/frontend/runtime/.gitkeep
+/console/runtime/*
+!/console/runtime/.gitignore
+!/console/runtime/.gitkeep
